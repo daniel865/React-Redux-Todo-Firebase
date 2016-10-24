@@ -28,16 +28,16 @@ describe('TodoSearch', () => {
 	});
 
 	it('should dispatch TOGGLE_SHOW_COMPLETED when checkbox checked', () => {
-		let spy = expect.createSpy();
 		var action = {
-			type: 'TOGGLE_SHOW_COMPLETED'
-		};
-		let todoSearch = TestUtils.renderIntoDocument(<TodoSearch dispatch={spy} />);
+      type: 'TOGGLE_SHOW_COMPLETED'
+    };
+    var spy = expect.createSpy();
+    var todoSearch = TestUtils.renderIntoDocument(<TodoSearch dispatch={spy}/>);
 
-		todoSearch.refs.showCompleted.checked = true;
-		TestUtils.Simulate.change(todoSearch.refs.showCompleted);
+    todoSearch.refs.showCompleted.checked = true;
+    TestUtils.Simulate.change(todoSearch.refs.showCompleted);
 
-		expect(spy).toHaveBeenCalledWith(action);
+    expect(spy).toHaveBeenCalledWith(action);
 	});
 
 });

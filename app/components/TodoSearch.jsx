@@ -9,8 +9,6 @@ export class TodoSearch extends Component {
 		super(props);
 	}
 
-
-
 	render() {
 		var {dispatch, showCompleted, searchText} = this.props;
 		return (
@@ -24,7 +22,7 @@ export class TodoSearch extends Component {
 				<div>
 					<label>
 						<input type="checkbox" ref="showCompleted" checked={showCompleted} onChange={() => {
-								dispatch(action.toggleShowCompleted());
+								dispatch(actions.toggleShowCompleted());
 							}} />
 						Show completed todos
 					</label>
