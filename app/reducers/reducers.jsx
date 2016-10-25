@@ -30,9 +30,9 @@ export var todosReducer = (state = [], action) => {
         return state.map((todo) => {
           if (todo.id === action.id){
             return {
-              ...state,
+              ...todo,
               ...action.updates
-            };  
+            };
           }else{
             return todo;
           }
